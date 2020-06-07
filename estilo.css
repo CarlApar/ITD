@@ -44,13 +44,13 @@ ul {
 	display: flex;
 }
 .nav-main ul li{
-	padding: 5px;
+	padding: 10px;
 }
 .nav-main ul li a {
 	padding: 2px;
 }
 .nav-main ul li a:hover {
-	border-bottom: 1px solid white;
+	border-bottom: 2px solid white;
 }
 .nav-main ul.nav-menu {
 	flex: 1;
@@ -59,20 +59,28 @@ ul {
 hr {
 	margin: 10px 0;
 }
-
+/*--Responsive Button--*/
+.menu-btn {
+	position: absolute;
+	cursor: pointer;
+	top: 15px;	
+	right: 30px;
+	z-index: 2;
+	display: none;
+}
 /*----SHOW CASE----*/
 .showcase {
 	width: 100%;
 	height: 550px;
-	background: url(https://images.pexels.com/photos/3952231/pexels-photo-3952231.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center/cover;
-	padding: 50px;
-	margin-bottom: 20px;
+	background: url(today.jpeg) no-repeat center center/cover;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 	justify-content: flex-end;
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-bottom: 50px;
+	margin-bottom: 20px;
+	color: #fff;
 }
 /*--SHOW CASE BUTTOM--MODIFICAR---*/
 .btn {
@@ -97,6 +105,8 @@ hr {
 .showcase p {
 	margin-bottom: 10px;
 }
+.showcase.btn {
+	margin-top: 20px;
 }
 /*---News Cards--*/
 .news-cards {
@@ -121,8 +131,6 @@ hr {
 	text-transform: uppercase;
 	display: inline-block;
 	font-weight: bold;
- margin: 10px 0;
- border: 1px solid white;
 }
 .news-cards a:hover {
  text-decoration: underline;
@@ -136,11 +144,10 @@ hr {
 }
 .cards-banner-one .content {
 	width: 40%;
-	padding: 100px 0 0 30px;
+	padding: 90px 0 0 30px;
 	color:#fff;
 }
 .cards-banner.one p,
-.cards-banner.one h3,
 .cards-banner.two p {
 	 padding: 10px 0 20px 0;
 }
@@ -195,13 +202,13 @@ hr {
 	margin: 0 auto;
 }
 .footer-link li {
-	line-height: 1.2;
+	line-height: 2.8;
 }
 /*-----Formato del Footer-----*/
 .footer {
 	background: #2f3640;
 	color:#616161;
-	font-size: 10px;
+	font-size: 12px;
 	padding: 20px 0;
 	text-align: center;
 	padding-bottom: 20px;
@@ -209,6 +216,12 @@ hr {
 /*---Tamaños para dispositivos Moviles ---*/
 @media (max-width: 700px){
 	/*--Modificar los elementos del Nav Main--*/
+	.menu-btn {
+		display: block;
+	}
+	.menu-btn:hover {
+		opacity: 0.5;
+	}
 	.nav-main ul.nav-menu {
 		display: block;
 		position: absolute;
@@ -218,10 +231,10 @@ hr {
 		width: 50%;
 		height: 100%;
 		border-right: #ccc 1px solid;
-		padding: 30px;
 		opacity: 0.7;
-		transform: translateX(-400px);
-		transition: transform .8s ease-in-out;
+		padding: 30px;
+		transform: translateX(-500px);
+		transition: transform 0.5s ease-in-out;
 	}
 	.nav-main ul.nav-menu li {
 		padding: 20px;
@@ -232,14 +245,10 @@ hr {
 		border-bottom: 0;
 	}
 	.nav.main ul.nav-menu.show {
-		transform: translateX-20px);
+		transform: translateX(-20px);
 	}
 	.nav-main ul.nav-menu-right {
-		margin-right: 40px;
-	}
-	.nav-main li.nav-menu li {
-		padding: 20px;
-		font-size: 14px;
+		margin-right: 50px;
 	}
 	/*¨--Cofigurar la pantalla--*/
 		.news-card {
@@ -248,10 +257,27 @@ hr {
 	.cards-banner-one .content,
 	.cards-banner-two .content {
 		width: 80%;
-		padding: 60px 20px;
 	}
 	.footer-links .footer-container ul{
 		grid-template-columns: repeat(2, 1fr);
-		text-align: center;
 	}
+}
+/*---Configurar una pantalla celular--*/
+@media (max-width: 500px) {
+  .news-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-banner-one .content,
+  .cards-banner-two .content {
+    width: 100%;
+    padding: 60px 20px;
+  }
+  .footer-links .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links .footer-container ul {
+    text-align: center;
+  }
 }
