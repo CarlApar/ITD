@@ -67,12 +67,14 @@ hr {
 	right: 30px;
 	z-index: 2;
 	display: none;
+	width: 40px;
 }
 /*----SHOW CASE----*/
 .showcase {
 	width: 100%;
 	height: 550px;
-	background: url(today.jpeg) no-repeat center center/cover;
+	background: url(today.jpeg) no-repeat center border-box;
+	background-size:cover;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -139,7 +141,8 @@ hr {
 .cards-banner-one {
 	width: 100%;
 	height: 350px;
-	background: url(https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center/cover;
+	background: url(https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center border-box;
+	background-size:cover;
 	margin-bottom: 40px;
 }
 .cards-banner-one .content {
@@ -155,7 +158,8 @@ hr {
 .cards-banner-two {
 	width: 100%;
 	height: 350px;
-	background: url(https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center/cover;
+	background: url(https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center border-box;
+	background-size:cover;
 }
 
 .cards-banner-two .content {
@@ -220,7 +224,7 @@ hr {
 		display: block;
 	}
 	.menu-btn:hover {
-		opacity: 0.5;
+		opacity: 0.7;
 	}
 	.nav-main ul.nav-menu {
 		display: block;
@@ -251,7 +255,7 @@ hr {
 		margin-right: 50px;
 	}
 	/*¨--Cofigurar la pantalla--*/
-		.news-card {
+	.news-cards {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	.cards-banner-one .content,
